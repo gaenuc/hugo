@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-const url = 'https://www.hugoexperience.com/back/api.php';
+const url = '';
 @Injectable({
   providedIn: 'root'
 })
