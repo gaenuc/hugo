@@ -1,0 +1,23 @@
+<div class="hidden md:flex flex-row  px-[15vw] h-32 justify-between">
+ <button (click)="boats.toggle($event)" class="bg-custom-blue shadow-button text-white h-9 px-8lg my-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">LE BARCHE</button>
+ <p-menu #boats [model]="boatItems" [popup]="true" />
+
+ <button [routerLink]="['/tour']" class="bg-oran shadow-button text-white h-9 px-8 my-auto rounded-full ml-16 cursor-pointer hover:opacity-80 active:scale-95">LE ESCURSIONI</button>
+ 
+    <img [routerLink]="['/']" class="cursor-pointer" src="/assets/img/Logo.png" alt="">
+
+ <button [routerLink]="['/contatti']" class="bg-oran shadow-button text-white h-9 px-12 my-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">CHI È HUGO</button>
+ <button class="mw-ai-toggle-chat bg-custom-blue shadow-button text-white h-9 px-12 my-auto rounded-full ml-16 cursor-pointer hover:opacity-80 active:scale-95">PARLA CON NOI</button>
+</div>
+
+<div class="flex flex-row md:hidden h-24 ">
+<div class="ml-3"></div>
+   <div class="mx-auto my-auto w-2/5">
+      <img [routerLink]="['/']" class="cursor-pointer" src="/assets/img/Logo.png" alt="">
+   </div>
+   <div class="my-auto mr-3 text-white">
+      
+         <ng-icon  (click)="menu.toggle($event)" name="heroBars3Solid" class="cursor-pointer active:scale-95" style="--ng-icon__size: 48px;"></ng-icon>
+      <p-menu #menu [model]="items" [popup]="true" />
+   </div>
+</div>

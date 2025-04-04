@@ -1,0 +1,125 @@
+"",
+<div class="hidden md:flex h-[34vw] bg-no-repeat" [style]="'background-image:url('+data.pics[0]+'); background-size:100%'">
+
+    <h1 class="text-[7vw] font-black text-white my-auto ml-[15vw] drop-shadow-md">
+        {{data.title | uppercase}}
+    </h1>
+</div>
+<div [class]="'flex md:hidden h-[140vw]'" [style]="'background-image:url('+data.pics[1]+')'">
+    <h1 class="text-6xl font-black text-white my-auto mx-auto drop-shadow-md">
+        {{data.title | uppercase}}
+    </h1>
+</div>
+<div class="flex flex-col px-6 md:px-[15vw] my-12 md:my-[6vw]">
+    <div class="flex flex-col md:flex-row mt-12 md:mt-[6vw] rounded-4xl bg-white w-full ">
+        <div class="flex flex-col flex-1/2 pt-8 md:pt-[2vw] px-12 md:pl-[3vw] md:pr-0 pb-6lg">        
+            <div class="flex">
+                <span class="text-2xl md:text-5xl-vw mx-auto  md:mx-0 font-bold text-dark-blue pb-[1vw] pr-[4vw] border-b-4 border-oran shadow-custom">{{data.name}}</span>
+            </div>
+            <div class="flex flex-col mt-8 md:mt-[2vw] md:w-3/4"> 
+                <span class="text-dark-blue text-xl md:text-xl-vw  leading-tight">{{data.description}}</span>
+                
+            </div>
+            <div class=" w-full flex flex-col mt-12 pb-6 md:pb-4 md:mt-[2vw]">
+                @for(point of data.points; track $index) {
+                    <span class="text-dark-blue text-lg md:text-lg-vw  leading-tight">• {{point}}</span><br>
+                }
+            </div>
+            <div class="w-full flex flex-col mt-6 md:mt-[2vw]">
+                <!-- <div class="flex flex-col md:flex-row items-center mb-[1vw]">
+                    <img class="h-12 md:h-20lg" src="/assets/img/icon_price.png" alt="">
+                    <div class="ml-[1vw] flex flex-col">
+                        <span class="text-dark-blue text-2xl md:text-2xl-vw text-center md:text-left leading-tight">Prezzi</span>
+                        @for(el of data.prices; track $index) {
+                            <span class="hidden md:block text-dark-blue text-base md:text-base-vw leading-tight">• {{el[0]}} {{el[1]}}</span>
+                            <span class="block md:hidden text-dark-blue text-base md:text-base-vw leading-tight mb-2"> @if (el[0]!== '') {•  <b> {{ el[0]}} </b><br>} {{el[1] }} </span>
+                        }
+                    </div>                    
+                </div> -->
+               
+            </div>
+            
+        </div>
+        <div class="flex-1/2 p-3 md:p-6lg">
+            <img class="rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none w-full h-full" [src]="data.pics[2]" alt="">
+        </div>
+    </div>
+ @if(data.additional) {
+    @for(el of data.add; track $index) {
+        <div id="tour"></div>
+        <div class="flex flex-col md:flex-row mt-12 md:mt-[6vw] rounded-4xl bg-white w-full">
+            <div class="flex flex-col flex-1/2 pt-8 md:pt-[2vw] px-12 md:pl-[3vw] md:pr-0 pb-6lg">        
+                <div class="flex">
+                    <span class="text-4xl md:text-5xl-vw font-bold text-dark-blue pb-[1vw] md:pr-[4vw] text-center md:text-left">{{el.title}}</span>
+                </div>
+                <div class="flex flex-col mt-8 md:mt-[2vw] md:w-3/4"> 
+                    <span class="text-dark-blue text-xl md:text-xl-vw text-center md:text-left leading-tight">{{el.descrizione}}</span>
+                    
+                </div>
+                <div class="border-b border-oran w-full pb-6 md:pb-0 grid grid-cols-2 md:grid-cols-2 md:grid-rows-2 mt-12 md:mt-[2vw]">
+                    <div class="flex flex-col md:flex-row row-start-1 md:col-start-1 col-span-2 items-center mb-8 md:mb-[1vw]">
+                        <img class="h-12 md:h-20lg" src="/assets/img/icon_hour.png" alt="">
+                        <div class="ml-[1vw] flex flex-col">
+                            <span class="text-dark-blue text-2xl md:text-2xl-vw  text-center md:text-left leading-tight">Durata Tour</span>
+                            <span class="text-dark-blue text-xl md:text-xl-vw  text-center md:text-left leading-tight">{{el.durata}}</span>
+                        </div>                    
+                    </div>
+                    <div class="flex flex-col md:flex-row row-start-2 md:row-start-2 md:col-start-1 col-span-2 items-center mb-[1vw]">
+                        <img class="h-12 md:h-20lg" src="/assets/img/icon_fuel.png" alt="">
+                        <div class="ml-[1vw] flex flex-col">
+                            <span class="text-dark-blue text-2xl md:text-2xl-vw  text-center md:text-left leading-tight">Check-In</span>
+                            <span class="text-dark-blue text-xl md:text-xl-vw  text-center md:text-left leading-tight">{{el.check_in}}</span>
+                        </div>                    
+                    </div>
+                   
+                </div>
+                <div class="w-full flex flex-col mt-6 md:mt-[2vw]">
+                   
+                    <div class="flex flex-col md:flex-row items-center mb-[1vw]">
+                        <img class="h-12 md:h-20lg" src="/assets/img/icon_price.png" alt="">
+                        <div class="ml-[1vw] flex flex-col">
+                            <span class="text-dark-blue text-2xl md:text-2xl-vw text-center md:text-left leading-tight">Prezzi</span>
+                          
+                                <span class="text-dark-blue text-xl md:text-base-vw text-center md:text-left leading-tight">{{el.prezzo}}</span>
+                          
+                        </div>                    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="flex-1/2 p-3 md:p-6lg">
+                <img class="rounded-b-4xl md:rounded-bl-none md:rounded-r-3xl w-full h-full" [src]="el.img" alt="">
+            </div>
+        </div>
+    }
+}
+    <!-- <div  class="flex flex-col md:flex-row mt-[6vw] rounded-4xl bg-white w-full ">
+        <div class="flex flex-col flex-1/2 pt-6 md:pt-[2vw] pl-6 md:pl-[3vw] pb-6lg">        
+            <div>
+                <span class="text-5xl md:text-5xl-vw font-bold text-dark-blue pb-[1vw] pr-[4vw] border-b-4 border-oran shadow-custom">Prenota </span>
+            </div>
+            <div class="flex flex-col mt-6 md:mt-[2vw] w-full"> 
+                <span class="text-dark-blue text-2xl md:text-3xl-vw leading-tight mb-[2vw] font-bold">{{data.name}}</span>
+                <span class="text-dark-blue text-xl md:text-3xl-vw leading-tight">
+                    Scrivici per prenotare la tua barca e vivere un'esperienza indimenticabile. <br> 
+                    
+                </span>                
+            </div>                        
+        </div>
+        <div class="flex flex-col flex-1/2 p-6 md:p-[2vw]">
+            <input placeholder="Nome" class="placeholder:text-dark-blue placeholder:text-xl md:placeholder:text-xl-vw placeholder:opacity-60 focus-visible:outline-2 focus-visible:outline-oran text-xl md:text-xl-vw border-2 border-oran py-2 md:py-2lg px-8 md:px-8lg w-full rounded-full text-dark-blue mb-8 md:mb-8lg" type="text">
+            <input placeholder="Email" class="placeholder:text-dark-blue placeholder:text-xl md:placeholder:text-xl-vw placeholder:opacity-60 focus-visible:outline-2 focus-visible:outline-oran text-xl md:text-xl-vw border-2 border-oran py-2 md:py-2lg px-8 md:px-8lg w-full rounded-full text-dark-blue mb-8 md:mb-8lg" type="text">
+            <div class="relative">
+                <input (focus)="showPicker = true" placeholder="Data" [value]="formaDate(date)" class="placeholder:text-dark-blue placeholder:text-xl md:placeholder:text-xl-vw placeholder:opacity-60 focus-visible:outline-2 focus-visible:outline-oran text-xl md:text-xl-vw border-2 border-oran py-2 md:py-2lg px-8 md:px-8lg w-full rounded-full text-dark-blue mb-8 md:mb-8lg" type="text">
+                @if(showPicker) {
+                    <div class="absolute"> 
+                        <p-datepicker (onInput)="report(date)" (blur)="showPicker = false" (onSelect)="showPicker = false"  [(ngModel)]="date" class="max-w-full" [inline]="true" [showWeek]="true" />
+                    </div>
+                }
+            </div>
+            <textarea placeholder="Messaggio" class="placeholder:text-dark-blue placeholder:text-xl md:placeholder:text-xl-vw placeholder:opacity-60 focus-visible:outline-2 focus-visible:outline-oran text-xl md:text-xl-vw border-2 border-oran py-2 md:py-2lg px-8 md:px-8lg w-full rounded-xl text-dark-blue mb-8 md:mb-8lg h-48 md:h-[6vw]" ></textarea>
+            
+            <button class="bg-oran text-white text-xl md:text-xl-vw h-12 md:h-[2.8vw] rounded-full w-full md:w-1/2 mt-auto mx-auto md:ml-auto md:mr-0 shadow-button cursor-pointer hover:opacity-80 active:scale-95 transition-transform duration-300">INVIA</button>
+        </div>
+    </div> -->
+</div>

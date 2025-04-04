@@ -1,0 +1,51 @@
+<div class="fixed bottom-4 right-4">
+    <!-- Bottone per aprire/chiudere la chat -->
+    <button 
+    (click)="toggleChat();" 
+      class="bg-custom-blue shadow-button cursor-pointer text-white p-3 w-16 h-16 md:w-16lg md:h-16lg rounded-full  hover:opacity-80 transition-all flex items-center justify-center"
+    >
+      <ng-icon name="heroChatBubbleOvalLeftEllipsis" class="w-8 md:w-8lg h-8 md:h-8lg"></ng-icon>
+    </button>
+  
+    <!-- Finestra di chat -->
+    <!-- *ngIf="isChatOpen"  -->
+    @if(isChatOpen) {<div 
+      class="fixed bottom-0 md:bottom-16 right-0 md:right-4 w-[100vw] md:w-[45vw] h-[100vh] md:h-[80vh] bg-white shadow-xl rounded-lg p-4 border border-gray-300 transition-transform duration-300 ease-out transform"
+      [ngClass]="{ 'translate-y-0 opacity-100': isChatOpen, 'translate-y-4 opacity-0 hidden': !isChatOpen }">
+      <div (click)="toggleChat()" class="flex justify-between items-center">
+        <button (click)="toggleChat();" class="text-gray-500 cursor-pointer">
+          <ng-icon name="heroXMark" class="w-5 h-5"></ng-icon>
+        </button>
+      </div>
+  
+      <div class="overflow-y-auto p-2">
+       
+        <div class="w-full">
+
+            <iframe 
+            src="https://site-key-67daead6d2f9ff546a5762fd.mwspace.ai"
+            oncontextmenu="return false"
+            class="w-full h-[90vh] md:h-[33.75vw] border-none"
+            allow="accelerometer; microphone; camera; autoplay; clipboard-write; encrypted-media; gyroscope"
+            allowfullscreen>
+          </iframe>
+          </div>
+      </div>
+              <!--<video #pres class="w-full rounded-lg shadow-lg" controls>
+              <source src="/assets/img/default_template.mp4" type="video/mp4">
+              Il tuo browser non supporta il tag video.
+            </video> -->
+    <!--  <div class="mt-2 flex">
+        <input 
+          type="text" 
+          pInputText
+          placeholder="Scrivi un messaggio..." 
+          class="flex-1 border p-2 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button pButton class="bg-custom-blue text-white p-2 rounded-r hover:opacity-80 flex items-center justify-center">
+          <ng-icon name="heroPaperAirplane" class="w-5 h-5"></ng-icon>
+        </button>
+      </div>-->
+    </div>}
+  </div>
+  

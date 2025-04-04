@@ -1,0 +1,74 @@
+@if(type === 'tours') {
+<div class="hidden md:flex flex-row carousel max-w-[70vw] relative">
+    <p-carousel [value]="cards" [numVisible]="5" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" [showIndicators]="false" (onPage)="report($event)">
+        <ng-template let-product #item>
+            <div class="flex flex-col rounded-4xl bg-white h-[36vw] mx-2lg"> 
+                <img class="rounded-t-4xl w-full" [src]="product.img" alt="">
+                <div class="flex flex-col py-[2vw] px-[1vw] h-full">
+                    <p class="text-dark-blue text-3xl-vw/8 font-bold text-center">{{product.name | uppercase}}</p>
+                    <p class="text-dark-blue text-lg/5 text-center my-4">{{product.text}}</p>
+
+                    @if(cards.indexOf(product) % 2 === 0) {
+                        <button [routerLink]="product.link" [fragment]="product.frag!== 'no'?product.frag: null" class="bg-oran shadow-button text-white h-9 px-12 mt-auto mx-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">SCOPRI</button>
+                    } 
+                    @else { 
+                        <button [routerLink]="product.link" [fragment]="product.frag!== 'no'?product.frag: null" class="bg-custom-blue shadow-button text-white h-9 px-12 mt-auto mx-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">SCOPRI </button>
+
+                    }
+                                    
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>    
+</div>
+<div class="flex md:hidden flex-row carousel max-w-[92vw] relative">
+    <p-carousel [value]="cards" [numVisible]="1" [numScroll]="1" [circular]="true" [showNavigators]="false" [responsiveOptions]="responsiveOptions" [showIndicators]="true">
+        <ng-template let-product #item>
+            <div class="rounded-4xl bg-white max-w-[75vw] min-w-52 mx-auto"> 
+                <img class="rounded-t-4xl w-full" [src]="product.img" alt="">
+                <div class="flex flex-col px-8 pt-3 pb-6">
+                    <p class="text-dark-blue text-2xl/8 font-bold text-center">{{product.name | uppercase}}</p>
+                    <p class="text-dark-blue text-lg/5 text-center my-4">{{product.text}}</p>
+                    @if(cards.indexOf(product) % 2 === 0) {
+                        <button [routerLink]="product.link" [fragment]="product.frag!== 'no'?product.frag: null" class="bg-oran mt-2 shadow-button  text-white h-9 px-14 mx-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">SCOPRI </button>
+                    } 
+                    @else { 
+                        <button [routerLink]="product.link" [fragment]="product.frag!== 'no'?product.frag: null" class="bg-custom-blue mt-2 shadow-button text-white h-9 px-14 mx-auto rounded-full cursor-pointer hover:opacity-80 active:scale-95">SCOPRI </button>
+
+                    }
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>    
+</div>
+}
+
+@else if(type === 'partners') { 
+    <div class="hidden md:flex flex-row carousel max-w-[70vw] relative">
+        <p-carousel [value]="partners" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" [showIndicators]="false">
+            <ng-template let-product #item>
+                <div class="flex flex-col mx-[1vw]">
+                    <img class=" rounded-4xl mb-[2vw] " src="https://dummyimage.com/460" alt="">
+                @if((partners.indexOf(product) % 2)=== 0){
+                    <button class="bg-oran text-white h-[2.8vw]  my-auto rounded-full  w-full cursor-pointer hover:opacity-80 active:scale-95 transition-transform duration-300">{{product | uppercase}}</button>
+                } @else {<button class="bg-custom-blue text-white h-[2.8vw]  my-auto rounded-full w-full cursor-pointer hover:opacity-80 active:scale-95 transition-transform duration-300">{{product | uppercase}} {{partners.indexOf(product)}}</button>}
+                </div>
+            </ng-template>
+        </p-carousel>
+
+    </div>
+    <div class="flex md:hidden flex-row carousel relative">
+        <p-carousel [value]="partners" [numVisible]="1" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" [showIndicators]="false">
+            <ng-template let-product #item>
+                <div class="flex max-w-[calc(100vw-32px)] flex-col mx-3">
+                    <img class=" rounded-4xl  mb-6 " src="https://dummyimage.com/460" alt="">
+                @if((partners.indexOf(product) % 2)=== 0){
+                    <button class="bg-oran text-white h-12  my-auto rounded-full  w-full cursor-pointer hover:opacity-80 active:scale-95 transition-transform duration-300">{{product | uppercase}}</button>
+                } @else {<button class="bg-custom-blue text-white h-12 my-auto rounded-full w-full cursor-pointer hover:opacity-80 active:scale-95 transition-transform duration-300">{{product | uppercase}} {{partners.indexOf(product)}}</button>}
+                </div>
+            </ng-template>
+        </p-carousel>
+
+    </div>
+
+}

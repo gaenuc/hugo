@@ -1,0 +1,60 @@
+
+<!-- bg-[url('/assets/img/pattern_footer.png')] -->
+ 
+ 
+<div class="flex flex-col  bg-custom-orange bg-contain bg-bottom bg-no-repeat">
+    <div class="flex mx-auto md:ml-0 md:px-[15vw] text-dark-blue">
+        <span class="my-auto text-lg mr-3">Seguici su: </span>  
+        <a href="https://www.facebook.com/profile.php?id=61560996625616" target="_blank" class="mr-6 md:mr-3">
+            <ng-icon name="bootstrapFacebook" class="cursor-pointer  active:scale-95" style="--ng-icon__size: 24px; color: #1890BF; "></ng-icon>
+        </a>      
+        <a href="https://www.instagram.com/hugoexperience_taormina" target="_blank">
+            <ng-icon name="bootstrapInstagram" class="cursor-pointer active:scale-95" style="--ng-icon__size: 24px; color: #1890BF"></ng-icon>
+        </a>
+        
+    </div>
+    <div class="flex flex-col md:flex-row mx-[6vw] border-t-4 border-custom-blue" >
+        <div class="flex-1/3 flex md:ml-[9vw] py-6 md:py-[3vw] border-custom-blue border-b">
+            <div class="mx-auto md:ml-0 w-3/5 my-auto">
+                <img class="w-3/4 mx-auto md:ml-0" src="/assets/img/Logo.png" alt="">
+                <p class="text-base text-dark-blue md:text-base-vw text-center md:text-left">
+                    Via Vico Fabbri Ferrai, 13,<br>
+                    Giardini Naxos, ME 98035 <br>
+                    P.IVA 06090370872
+                </p>
+            </div>
+        </div>
+        <div class="flex-1/3 flex flex-col mx-auto py-6 md:pt-[3vw]  ">
+            <!-- <p class="text-dark-blue font-bold text-2xl md:text-xl-vw text-center mb-6">LE NOSTRE AVVENTURE</p> -->
+            <p [routerLink]="['/tour']" class="text-dark-blue text-center text-xl md:text-xl-vw mb-4lg cursor-pointer">ESCURSIONI</p>
+            <p [routerLink]="['/barche','fiat-500-dolce-vita']" class="text-dark-blue text-center text-xl md:text-xl-vw mb-4lg cursor-pointer">DOLCEVITA TOUR</p>
+            <!-- <p [routerLink]="['/barche','allegra-21-sun']" class="text-dark-blue text-center text-2xl md:text-xl-vw mb-4lg cursor-pointer">ALLEGRA 21 SUN</p>
+            <p [routerLink]="['/barche','blumax-40-cavalli']" class="text-dark-blue text-center text-2xl md:text-xl-vw mb-4lg cursor-pointer">BLUMAX 40 CV</p>             -->
+            <p [routerLink]="['/contatti']" class="text-dark-blue text-center text-xl md:text-xl-vw mb-4lg cursor-pointer">CHI SIAMO</p>
+            <p [routerLink]="['/lavora-con-noi']" class="text-dark-blue text-center text-xl md:text-xl-vw mb-4lg cursor-pointer">COLLABORA CON NOI</p>            
+        </div>
+        <div class="flex-1/3 md:mr-[6vw] flex flex-col py-6 md:py-[3vw] border-custom-blue border-t">
+            <div class="mb-auto">
+                <!-- <p class="text-dark-blue font-bold text-2xl md:text-xl-vw mb-6 text-center md:text-left">CONTATTI</p> -->
+                <a href="tel:+393533061021" class="flex flex-col md:flex-row mb-6 md:mb-[1vw] items-center">
+                    <img class="max-w-10" src="/assets/img/contact_phone.png" alt="">
+                    <span class="md:ml-[1vw] mt-3 md:mt-0 text-xl md:text-lg-vw text-dark-blue ">+39 353 306 1021</span>
+                </a>
+                <!-- <div class="flex flex-col md:flex-row mb-12 md:mb-[1vw] items-center">
+                    <img class="max-w-16" src="/assets/img/contact_wa.png" alt="">
+                    <span class="md:ml-[2vw] mt-3 md:mt-0 text-2xl md:text-2xl-vw text-dark-blue ">+39 353 306 1021</span>
+                </div> -->
+                <a href="mailto:info&#64;hugoexperience.com" target="_blank" class="flex flex-col md:flex-row mb-12 md:mb-[1vw] items-center">
+                    <img class="max-w-10" src="/assets/img/contact_mail.png" alt="">
+                    <span class="md:ml-[1vw] mt-3 md:mt-0 text-xl md:text-lg-vw text-dark-blue ">info&#64;hugoexperience.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="h-6 flex flex-row">
+        <div class="flex flex-row text-xs md:text-xs-vw mx-auto">
+            <span class="mt-0 text-dark-blue">Developed by MultiService SRL</span> 
+        </div>
+    </div>
+
+</div>

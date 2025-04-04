@@ -1,1 +1,247 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+/* @import "primeicons/primeicons.css"; */
+.barlow-thin {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .barlow-extralight {
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .barlow-light {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .barlow-regular {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-medium {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .barlow-semibold {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .barlow-bold {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .barlow-extrabold {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .barlow-black {
+    font-family: "Barlow", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .barlow-thin-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .barlow-extralight-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .barlow-light-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .barlow-regular-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .barlow-medium-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .barlow-semibold-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .barlow-bold-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .barlow-extrabold-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .barlow-black-italic {
+    font-family: "Barlow", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+@theme {
+    /* Color utilities */
+    --color-custom-orange:#e5aa75;
+    --color-dark: #201F1E;
+    --color-light: #FFFdF3;
+    --color-oran: #F4980D;
+    --color-custom-blue: #1890BF;
+    --color-dark-blue: #124E60;
+    /* Font utilities */
+    --font-sans: 'Barlow', 'Arial', sans-serif;
+    --font-serif: 'Georgia', 'serif';
+    --font-mono: 'Courier New', monospace;
+  
+    /* Text utilities */
+    --text-xs-vw: 0.625vw;
+    --text-sm-vw: 0.72917vw;
+    --text-base-vw: 0.83333vw;
+    --text-lg-vw: 0.9375vw;
+    --text-xl-vw: 1.04167vw;
+    --text-2xl-vw: 1.25vw;
+    --text-3xl-vw: 1.5625vw;
+    --text-4xl-vw: 1.875vw;
+    --text-5xl-vw: 2.5vw;
+  
+    /* Font weight utilities */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+  
+    /* Spacing utilities */
+    --spacing-0lg: 0vw;
+    --spacing-0.5lg: 0.10417vw;
+    --spacing-1lg: 0.20833vw;
+    --spacing-2lg: 0.41667vw;
+    --spacing-3lg: 0.625vw;
+    --spacing-4lg: 0.83333vw;
+    --spacing-5lg: 1.04167vw;
+    --spacing-6lg: 1.25vw;
+    --spacing-8lg: 1.66667vw;
+    --spacing-10lg: 2.08333vw;
+    --spacing-12lg: 2.5vw;
+    --spacing-16lg: 3.33333vw;
+    --spacing-20lg: 4.16667vw;
+    --spacing-24lg: 5vw;
+    --spacing-32lg: 6.66667vw;
+    --spacing-40lg: 8.33333vw;
+    --spacing-48lg: 10vw;
+    --spacing-56lg: 11.66667vw;
+    --spacing-64lg: 13.33333vw;
+  
+    /* Border radius utilities */
+    --radius-sm: 0.125rem;
+    --radius-md: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 1rem;
+  
+    /* Box shadow utilities */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-custom: 0px 8px 5px -3px rgba(0, 0, 0, 0.2);
+    --shadow-button: 8px 4px 8px 0px rgba(0, 0, 0, 0.71);
+  
+    /* Transition timing function utilities */
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+    --p-button-text-secondary-active-background:#F4980D !important;
+    --p-toggleswitch-checked-background:#F4980D !important;
+    /* Animation utilities */
+    --animate-spin: spin 1s linear infinite;
+  }
+  
+  body {
+    position: relative;
+    
+    @apply font-sans;
+    @apply [background:url('/assets/img/pattern.png'),_#e5aa75] ;
+    @apply [background-size:80%];
+    @apply md:bg-none;
+    @apply md:bg-custom-orange;
+  }
+  .p-carousel-horizontal {
+    @apply max-w-[92vw];
+    @apply md:max-w-[70vw];
+  }
+  .p-carousel-prev-button, .p-carousel-next-button {
+    @apply rounded-full;
+    @apply bg-oran;
+    @apply  active:bg-oran;
+    @apply  active:opacity-80;    
+  }
+
+.p-button-text.p-button-secondary:not(:disabled):active{
+    background-color: #F4980D !important;
+    @apply opacity-80;  
+
+  }
+  .p-carousel-prev-button>button,.p-carousel-next-button>button {
+    color: white !important;
+    font-size: 24px !important;
+  }
+  select:invalid { opacity:0.6 ; }
+  .p-datepicker-day-selected {
+    background-color: #F4980D !important;
+  }
+  .p-menu-submenu-label {
+    color: #1890BF !important;
+  }
+  .p-menu-item-link {
+    color: #124E60 !important;
+  }
+  .iubenda-cs-preferences-link {
+    left: 0 !important;
+  }
+  .p-carousel-indicator-active .p-carousel-indicator-button {
+    background-color: #1890BF !important;
+
+  }
+  .p-toggleswitch-checked {
+    --p-toggleswitch-checked-background: #F4980D !important;
+    --p-toggleswitch-checked-hover-background: #e5aa75 !important;
+  }
+
+  .p-checkbox-checked {
+    --p-checkbox-checked-background: #e5aa75 !important;
+    --p-checkbox-checked-hover-background: #e5aa75 !important;
+    --p-checkbox-checked-border-color: #e5aa75 !important;
+    --p-checkbox-checked-hover-border-color: #e5aa75 !important;
+  }
+  .p-checkbox {
+    --p-checkbox-invalid-border-color:: #e5aa75 !important;
+
+  }
